@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Aportadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asset/css/aportadores.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Fundación Apoyo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="aportadores.html" aria-current="page">Gestión de Aportadores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="historial_aportes.html">Historial de Aportes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reporte.html">Reportes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" id="nuevo-aportador">NUEVO APORTADOR</button>
+                    <button class="btn btn-secondary" id="definir-aporte">DEFINIR APORTE</button>
+                    <button class="btn btn-info" id="generar-mandato">GENERAR MANDATO</button>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h2 class="mb-4">REGISTRO DE APORTADORES</h2>
+                <div class="input-group mb-3">
+                    <input type="text" id="search-input" class="form-control" placeholder="Buscar aportador" aria-label="Buscar aportador">
+                    <button class="btn btn-outline-secondary" type="button" id="search-button">🔍</button>
+                </div>
+                <ul class="list-group" id="aportador-list">
+                    <!-- La lista de aportadores se llenará dinámicamente con JavaScript -->
+                </ul>
+                <div id="form-container" class="mt-4" style="display: none;">
+                    <h3>Formulario de Aportador</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipo-aporte" class="form-label">Tipo de Aporte:</label>
+                            <select class="form-select" id="tipo-aporte" name="tipo-aporte" required>
+                                <option value="">Seleccione un tipo</option>
+                                <option value="mensual">Mensual</option>
+                                <option value="anual">Anual</option>
+                                <option value="unico">Único</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="monto" class="form-label">Monto:</label>
+                            <input type="number" class="form-control" id="monto" name="monto" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="guardar-aportador">GUARDAR APORTADOR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./asset/js/aportadores.js"></script>
+</body>
+</html>

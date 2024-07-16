@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    
+    color: white;
+    padding-top: 0px;
+    min-height: 70px;
+    
+    text-align: center;
+    font-size: 14px;
+}
+/* navbar */
+.ezy__nav4 {
+/* Bootstrap variables */
+--bs-body-color: #000;
+--bs-body-bg: rgb(255, 255, 255);
+
+background-color: var(--bs-body-bg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+/* Dark Gray Block Style */
+.dark-gray .ezy__nav4,
+.ezy__nav4.dark-gray {
+/* Bootstrap variables */
+--bs-body-color: #ffffff;
+--bs-body-bg: rgb(30, 39, 53);
+}
+
+.ezy__nav4 .navbar-brand {
+font-size: 20px;
+color: var(--bs-body-color);
+}
+
+.ezy__nav4 .navbar-toggler {
+border: none;
+box-shadow: none !important;
+}
+
+.ezy__nav4 .navbar-toggler>span>span {
+position: relative;
+}
+
+.ezy__nav4 .navbar-toggler>span>span,
+.ezy__nav4 .navbar-toggler>span>span::before,
+.ezy__nav4 .navbar-toggler>span>span::after {
+height: 2px;
+background-color: var(--bs-body-color);
+width: 25px;
+display: inline-block;
+border-radius: 5px;
+transition: all .35s ease-in-out;
+}
+
+.ezy__nav4 .navbar-toggler>span>span::before,
+.ezy__nav4 .navbar-toggler>span>span::after {
+content: '';
+position: absolute;
+left: 0;
+}
+
+.ezy__nav4 .navbar-toggler[aria-expanded="false"]>span>span::before {
+top: 7px;
+}
+
+.ezy__nav4 .navbar-toggler[aria-expanded="false"]>span>span::after {
+bottom: 7px;
+}
+
+.ezy__nav4 .navbar-toggler[aria-expanded="true"]>span>span {
+background-color: transparent;
+}
+
+.ezy__nav4 .navbar-toggler[aria-expanded="true"]>span>span::before {
+top: 0;
+transform: rotate(-45deg);
+}
+
+.ezy__nav4 .navbar-toggler[aria-expanded="true"]>span>span::after {
+bottom: 0;
+transform: rotate(45deg);
+}
+
+.ezy__nav4 .navbar-nav .nav-link {
+color: var(--bs-body-color);
+opacity: .6;
+}
+
+
+
+@media (min-width: 992px) {
+.ezy__nav4 .navbar-nav .nav-link {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+}
+
+.ezy__nav4 .btn {
+border-radius: 10px;
+}
+.ezy__nav4 .btn-outline-light {
+border-color: var(--bs-body-color);
+color: var(--bs-body-color);
+}
+.ezy__nav4 .btn-outline-light:hover {
+background-color: var(--bs-body-color);
+color: var(--bs-body-bg);
+}
+
+main {
+    padding: 20px 0;
+}
+
+footer {
+    background: #35424a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
